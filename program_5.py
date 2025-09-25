@@ -12,7 +12,21 @@ def main():
     total = 0.0
 
     ######################
-    # WRITE YOUR CODE HERE
+    budget = float(input("Enter the amount you have budgeted for this month: $"))
+    while spent != 0:
+        spent = float(input("Enter an expense (0 to finish): $"))
+        total += spent
+    difference = budget - total
+
+    print("\n==============================")
+    print(f"Your total expenses: ${total:.2f}")
+
+    if difference > 0:
+        print(f"You are UNDER budget by ${difference:.2f}. Good job!")
+    elif difference < 0:
+        print(f"You are OVER budget by ${abs(difference):.2f}. Be careful!")
+    else:
+        print("You are EXACTLY on budget!")
     ######################
 
 
